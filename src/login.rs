@@ -31,7 +31,7 @@ pub async fn handle_login(username: String, password: String, url: String) {
     vprintln!("Username: {}", username);
 
     // MD5 encrypt the password
-    let password_hash = format!("{:x}", md5::compute(password.as_bytes()));
+    let password_hash = password;
 
     // Prepare the login request
     let login_request = LoginRequest {
